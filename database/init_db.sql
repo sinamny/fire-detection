@@ -3,7 +3,7 @@ CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 CREATE TYPE fire_intensity_enum AS ENUM ('low', 'medium', 'high', 'extreme');
 CREATE TYPE processing_status_enum AS ENUM ('pending', 'processing', 'completed', 'failed');
 CREATE TYPE alert_status_enum AS ENUM ('pending', 'sent', 'failed');
-CREATE TYPE activity_type_enum AS ENUM ('login', 'logout', 'video_upload', 'detection_view', 'alert_view');
+CREATE TYPE activity_type_enum AS ENUM ('register','login', 'logout', 'video_upload', 'detection_view', 'alert_view');
 CREATE TYPE user_role AS ENUM ('user', 'admin');
 
 CREATE TABLE users (

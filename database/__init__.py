@@ -48,20 +48,20 @@ def main():
     conn.autocommit = True
     cursor = conn.cursor()
 
-    cursor.execute("SELECT 1 FROM pg_database WHERE datname = 'db1'")
+    cursor.execute("SELECT 1 FROM pg_database WHERE datname = 'fire_detection'")
     exists = cursor.fetchone()
     if not exists:
-        cursor.execute("CREATE DATABASE db1")
-        print("Đã tạo database 'db1'")
+        cursor.execute("CREATE DATABASE fire_detection")
+        print("Đã tạo database 'fire_detection'")
     else:
-        print("Database 'db1' đã tồn tại")
+        print("Database 'fire_detection' đã tồn tại")
 
     cursor.close()
     conn.close()
 
     conn = psycopg2.connect(
         host="localhost",
-        database="db1",
+        database="fire_detection",
         user="postgres",
         password="123456"
     )
